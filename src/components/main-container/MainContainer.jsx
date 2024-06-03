@@ -21,6 +21,8 @@ const MainContainer = () => {
 							key={v4()}
 							$background={user.bgColor}
 							$text={user.textColor}
+							$height={user.height}
+							$grid={user.grid}
 						>
 							<StyledHeader>
 								<StyledImage

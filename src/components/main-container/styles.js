@@ -7,16 +7,30 @@ const StyledMainContainer = styled.main`
 	padding: 1.25rem;
 
 	@media screen and (min-width: 768px) {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		height: 35.75rem;
+		width: 69.375rem;
+		margin: auto;
 	}
 `;
 
 const StyledCard = styled.article`
-	max-width: 20.4375rem;
+	width: 20.4375rem;
 	padding: 2rem;
 	border-radius: 0.625rem;
 	font-family: 'Barlow Semi Condensed', sans-serif;
 	background-color: ${({ $background }) => $background};
 	color: ${({ $text }) => $text};
+
+	@media screen and (max-width: 768px) {
+		height: ${({ $height }) => $height};
+	}
+
+	@media screen and (min-width: 768px) {
+		width: 100%;
+		grid-area: ${({ $grid }) => $grid};
+	}
 `;
 
 const StyledHeader = styled.header`
